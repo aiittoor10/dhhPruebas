@@ -1,0 +1,209 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+
+.news-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.bg-image {
+    background-image: url(img/encabezado.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+}
+
+.highlight-text {
+    display: inline;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0 10px;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+
+.btn-primary {
+    background-color: rgb(154, 110, 236);
+}
+
+.news-description {
+    text-align: justify;
+}
+
+.event-description {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+.circle-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-container img {
+    width: 100%;
+    height: auto;
+}
+
+.historico {
+    background-color: #000000;
+    /* Color de fondo para resaltar */
+    color: #fff;
+    /* Color de texto */
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+/* Estilos personalizados para el calendario */
+#calendar {
+    margin-top: 20px;
+    /* Ajustar el margen superior según sea necesario */
+}
+
+.calendar-day {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+/* Estilos personalizados para el calendario */
+.small-calendar {
+    width: 300px;
+    max-width: 400px;
+    /* Ajustar el ancho máximo según sea necesario */
+    margin: 0 auto;
+    /* Centrar el calendario horizontalmente */
+}
+
+.small-calendar button {
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+    /* Tamaño de fuente más pequeño para los botones del calendario */
+}
+
+h5 {
+    color: red;
+    font-weight: bolder;
+}
+
+
+
+/* Estilo adicional para los vídeos recientes */
+.card-body {
+    padding: 1.25rem;
+}
+
+/* Ajuste para el buscador */
+.input-group-append button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Ajuste para la alerta de atención */
+.alert {
+    margin-bottom: 0;
+}
+
+/* Estilo para el botón de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.whatsapp-button:hover {
+    background-color: #20b858;
+}
+
+/* Estilo para las imágenes de secciones */
+.section-image img {
+    width: 100%;
+    height: auto;
+}
+
+/*ultima noticia index*/
+/* Animación de bordes iluminados */
+/* Animación de bordes iluminados */
+.ultimaNoticia {
+    border: 2px solid #ddd; /* Borde inicial */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Sombra inicial */
+    transition: box-shadow 0.3s ease-in-out;
+    animation: iluminarRojo 2s infinite; /* Aplicar animación */
+}
+
+/* Definición de la animación */
+@keyframes iluminarRojo {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Sombra inicial tenue */
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 0, 0, 1); /* Iluminación máxima intensa */
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Volver a la sombra inicial */
+    }
+}
+
+/* Estilo general */
+.resultados {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Sección "¿Sabías que?" */
+.contenedor-sabias {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff4e6;
+}
+
+/* Sección TikTok */
+.contenedor-tiktok {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #e6f7ff;
+}
+
+/* Sección Instagram */
+.contenedor-instagram {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fef3ff;
+}

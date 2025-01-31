@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Déjate de Historias</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="logo.ico" sizes="16x16" />
+    <link rel="icon" type="image/png" href="logo.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="logo.ico" sizes="48x48" />
+    <link rel="apple-touch-icon" href="logo.ico" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* Contenedor de cartas */
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      /* Tarjeta */
+      .card {
+        width: 250px;
+        height: 320px;
+        perspective: 1000px;
+        border: none;
+      }
+
+      /* Contenido interno con efecto de giro */
+      .card-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+
+      /* Caras de la tarjeta */
+      .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(255, 152, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 15px;
+      }
+
+      /* Frente de la tarjeta */
+      .card-front {
+        background-color: #fff;
+        background-size: 100%;
+        color: #000000;
+      }
+
+      /* Parte trasera de la tarjeta */
+      .card-back {
+        background: #222;
+        color: #fff;
+        transform: rotateY(180deg);
+        font-size: 1rem;
+        padding: 20px;
+      }
+
+      /* Animación al pasar el cursor */
+      .card:hover .card-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Responsividad */
+      @media (max-width: 768px) {
+        .card {
+          width: 200px;
+          height: 280px;
+        }
+        .card-front, .card-back {
+          font-size: 1rem;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Déjate de Historias</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="espania.html">Historia de España</a></li>
+            <li class="nav-item"><a class="nav-link" href="calendario.html">Acontecimientos</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Descubre</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="hisBelica.html">Historia Bélica</a>
+                <a class="dropdown-item" href="edadmedia.html">Edad Media</a>
+                <a class="dropdown-item" href="leyendas.html">Leyendas</a>
+                <a class="dropdown-item" href="europa.html">Europa</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="creadores.html">Sobre los Creadores</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="bg-image text-center">
+      <h1 class="custom-header mt-4"></h1>
+    </div>
+
+    <div
+      class="alert alert-warning alert-dismissible fade show text-center"
+      role="alert"
+    >
+      <strong>¡Atención!</strong> La página web está en fase de desarrollo y se
+      irán añadiendo más contenidos. Se espera que esté completamente disponible
+      aproximadamente en marzo de 2025.
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="text-center">
+            <h3 id="event-date"></h3>
+            <div
+              id="event-description"
+              class="alert alert-info mt-3"
+              style="display: none"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <form class="form-inline justify-content-center my-2 my-lg-0">
+        <input
+          class="form-control form-control-lg mr-sm-2"
+          type="search"
+          placeholder="Explora historias perdidas..."
+          style="width: 400px"
+          aria-label="Buscar"
+        />
+        <button
+          class="btn btn-outline-success btn-lg my-2 my-sm-0"
+          type="submit"
+        >
+          Buscar
+        </button>
+      </form>
+    </div>
+
+    <!-- Título 
+    <div class="container text-center mt-5">
+      <h2 class="text-warning">📜 Cartas de la Historia</h2>
+      <p class="text-white">Descubre los eventos históricos de forma interactiva</p>
+    </div>-->
+
+    <!-- Contenedor de Cartas -->
+    <div class="container card-container">
+      <!-- Tarjeta 1 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front" style="background-image: url(https://i.pinimg.com/originals/94/95/4a/94954a1b974c94ea7346ba06f7d493c0.jpg); color: #fff;"></div>
+          <div class="card-back">Isabel de Castilla</div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front" style="background-image: url(https://www7.uc.cl/sw_educ/historia/expansion/Interfaz/fotos/f310b.jpeg); color: #fff;"></div>
+          <div class="card-back">Cristobal Colón</div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front" style="background-image: url(https://alcalaturismoymas.com/wp-content/uploads/2019/04/0020.jpg);"></div>
+          <div class="card-back">Miguel de Cervantes</div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front" style="background-image: url(https://billiken.lat/wp-content/uploads/2024/02/dt-1.png); background-size: cover;"></div>
+          <div class="card-back">Cid Campeador</div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 5 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/RETRATO_DEL_GRAL._FRANCISCO_FRANCO_BAHAMONDE_%28adjusted_levels%29.jpg/220px-RETRATO_DEL_GRAL._FRANCISCO_FRANCO_BAHAMONDE_%28adjusted_levels%29.jpg);"></div>
+          <div class="card-back">Francisco Franco</div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 6 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front" style="background-image: url(https://turismolasnavas.es/public/images/pag56-img-felix-lope-de-vega-i-carpio.QPF.jpg);"></div>
+          <div class="card-back">Lope de Vega</div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <footer
+      class="bg-dark text-white text-center py-4 mt-5"
+      style="
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        left: 0;
+        right: 0;
+      "
+    >
+      <div style="width: 100%">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/ddh_yt/" target="_blank">
+                  <img
+                    src="img/instagram.png"
+                    alt="Instagram"
+                    class="img-fluid"
+                    style="width: 60px"
+                  />
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://twitter.com/tu_perfil" target="_blank">
+                  <img
+                    src="img/twitter.jpeg"
+                    alt="Twitter"
+                    class="img-fluid"
+                    style="width: 60px"
+                  />
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.youtube.com/@ddh_yt" target="_blank">
+                  <img
+                    src="img/yt.png"
+                    alt="YouTube"
+                    class="img-fluid"
+                    style="width: 60px"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="img/logo.jpg"
+              alt="Déjate de Historias"
+              class="img-fluid rounded-circle"
+              style="width: 150px"
+            />
+            <h2 class="mt-2">Déjate de Historias</h2>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <a href="curiosidades.html" class="text-white">Curiosidades</a>
+              </li>
+              <li>
+                <a href="calendario.html" class="text-white">Acontecimientos</a>
+              </li>
+              <li><a href="noticias.html" class="text-white">Noticias</a></li>
+              <li>
+                <a href="creadores.html" class="text-white"
+                  >Sobre los creadores</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a
+          href="https://whatsapp.com/channel/0029Vakk2QrDp2Q89reAmP1m"
+          class="whatsapp-button"
+          target="_blank"
+        >
+          <img
+            src="img/whatsapp.png"
+            alt="WhatsApp"
+            style="width: 50px; margin-right: 1px"
+          />
+          Nuestro Canal
+        </a>
+        <div class="mt-4">
+          <img
+            src="img/CCBYNCND.png"
+            alt="CCBYNCND"
+            class="img-fluid"
+            style="width: 100px"
+          />
+          <p class="mt-2">Attribution-NonCommercial-NoDerivatives 3.0 IGO</p>
+          <p>© Déjate de Historias 2025</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap y dependencias de JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="buscador.js"></script>
+  </body>
+</html>

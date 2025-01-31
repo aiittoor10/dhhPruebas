@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Déjate de Historias</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="logo.ico" sizes="16x16" />
+    <link rel="icon" type="image/png" href="logo.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="logo.ico" sizes="48x48" />
+    <link rel="apple-touch-icon" href="logo.ico" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Déjate de Historias</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="historia.html">Historia</a>
+            </li>
+            <li class="nav-item">
+              <a href="espania.html" class="nav-link">Historia de España</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="calendario.html">Acontecimientos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Descubre
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="hisBelica.html"
+                  >Historia Bélica</a
+                >
+                <a class="dropdown-item" href="edadmedia.html">Edad Media</a>
+                <a class="dropdown-item" href="leyendas.html">Leyendas</a>
+                <a class="dropdown-item" href="europa.html">Europa</a>
+                <a class="dropdown-item" href="prehistotiaHu.html"
+                  >Prehistoria Humana</a
+                >
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="descubre.html"
+                  >Descubre Más...</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="creadores.html">Sobre los Creadores</a>
+            </li>
+            <!--<li class="nav-item"><a href="https://ddhhyt.github.io/newsletter/" class="nav-link">Newsletter</a></li>-->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    <div class="bg-image text-center">
+      <h1 class="custom-header mt-4"></h1>
+    </div>
+
+    <div
+      class="alert alert-warning alert-dismissible fade show text-center"
+      role="alert"
+    >
+      <strong>¡Atención!</strong> La página web está en fase de desarrollo y se
+      irán añadiendo más contenidos. Se espera que esté completamente disponible
+      aproximadamente en marzo de 2025.
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="text-center">
+            <h3 id="event-date"></h3>
+            <div
+              id="event-description"
+              class="alert alert-info mt-3"
+              style="display: none"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <form class="form-inline justify-content-center my-2 my-lg-0">
+        <input
+          class="form-control form-control-lg mr-sm-2"
+          type="search"
+          placeholder="Explora historias perdidas..."
+          style="width: 400px"
+          aria-label="Buscar"
+        />
+        <button
+          class="btn btn-outline-success btn-lg my-2 my-sm-0"
+          type="submit"
+        >
+          Buscar
+        </button>
+      </form>
+    </div>
+
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col-md-8">
+          <h1>Déjate de Historias</h1>
+          <p class="text-justify">
+            Bienvenidos a un viaje fascinante a través de los pasillos del
+            tiempo. En este espacio dedicado a la historia, exploraremos
+            civilizaciones perdidas, batallas épicas y personajes legendarios
+            que moldearon nuestro mundo. Desde los misterios del antiguo Egipto
+            hasta los secretos de la Segunda Guerra Mundial, cada video y
+            artículo está diseñado para transportarte y descubrir el pasado de
+            una manera nueva y emocionante. Únete a nosotros mientras
+            desentrañamos los hilos del pasado para entender mejor nuestro
+            presente y futuro.
+          </p>
+
+          <div class="container ultimaNoticia mt-5 p-4">
+            <h2 class="text-center mb-3">NUESTRO CANAL DE YOUTUBE </h2>
+            <div class="d-flex align-items-center">
+              <img
+                src="https://yt3.googleusercontent.com/yf3_-Y_Xsx9L_feQuiwih0g8NvZ2-PCwDCYswDsOaCt5ACAG5NgwXmeeR_TQ7JsY6-mmrIaneg=s160-c-k-c0x00ffffff-no-rj"
+                alt="Imagen Noticia"
+                class="img-fluid mr-3"
+                style="width: 120px; height: auto; border-radius: 8px"
+              />
+              <div>
+                <h5>No te pierdas ningun video </h5>
+                <p class="text-justify mb-3">
+                  📢 Lanzamos videos todas las semanas. ¡Suscríbete y activa las notificaciones para no perderte ninguno! 🔔                </p>
+                <a
+                  href="https://www.youtube.com/@ddh_yt"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >Ver ahora</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <h2>LO NUEVO!</h2>
+            <div class="card p-3">
+              <h5>
+                A un Botón de la Guerra: Vasily Arkhipov y la Crisis de los
+                Misiles
+              </h5>
+
+              <p class="text-justify mt-2">
+                ¡Hola a todos! En el video de hoy, exploraremos la increíble
+                historia de Vasily Arkhipov y su papel crucial durante la Crisis
+                de los Misiles en Cuba en 1962. Descubriremos cómo este oficial
+                de la Marina Soviética tomó una decisión valiente y crucial que
+                evitó una guerra nuclear entre Estados Unidos y la Unión
+                Soviética, y cómo su acto de coraje ha sido reconocido como uno
+                de los momentos más importantes y heroicos de la Guerra Fría.
+                Acompáñennos mientras desglosamos los eventos que llevaron a
+                este punto crítico y celebramos el legado de un hombre que,
+                literalmente, salvó al mundo.
+              </p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/UUOc7x3ESOE"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3 class="mt-3">Explora los Continentes</h3>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="europa.html">Europa</a></li>
+            <li class="list-group-item"><a href="africa.html">África</a></li>
+            <li class="list-group-item"><a href="asia.html">Asia</a></li>
+            <li class="list-group-item"><a href="an.html">América del Norte</a></li>
+            <li class="list-group-item"><a href="as.html">América del Sur</a></li>
+            <li class="list-group-item"><a href="oceania.html">Oceanía</a></li>
+            <li class="list-group-item"><a href="antartida.html">Antártida</a></li>
+          </ul>
+          <div class="mt-5">
+            <h2 class="my-4">¿Qué pasó cuando naciste?</h2>
+            <!-- Campo de entrada y botón de búsqueda -->
+            <div class="input-group mb-3">
+                <input type="text" id="search" class="form-control" placeholder="Ingrese su fecha de nacimiento (DD/MM)">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" onclick="buscarEvento()">Buscar</button>
+                </div>
+            </div>
+            <!-- Contenedor de resultados -->
+            <div id="resultados" class="resultados mt-4" style="max-height: 400px; overflow-y: auto;">
+                <!-- Los resultados de la búsqueda se cargarán aquí -->
+            </div>
+        
+            <!-- Sección de "¿Sabías que?" -->
+            <div class="contenedor-sabias mt-4">
+                <h4 class="text-center">❓ ¿Sabías que?</h4>
+                <p class="text-justify mt-3">
+                    La Biblioteca de Alejandría fue una de las mayores y más importantes del mundo antiguo. Se estima que contenía más de 400,000 pergaminos, pero se perdió en un misterioso incendio.
+                </p>
+                <a href="curiosidades.html" class="btn btn-warning btn-block">Descubre más</a>
+            </div>
+        
+            <!-- Sección de TikTok -->
+            <div class="contenedor-tiktok mt-4">
+                <h4 class="text-center">🎵 Síguenos en TikTok</h4>
+                <p class="text-justify mt-3">
+                    Descubre videos cortos sobre los momentos más sorprendentes de la historia. ¡Contenido exclusivo, divertido y educativo al alcance de un clic!
+                </p>
+                <a href="https://www.tiktok.com/@tu_cuenta" target="_blank" class="btn btn-primary btn-block">
+                    Ver nuestro TikTok
+                </a>
+            </div>
+        
+            <!-- Sección de Instagram -->
+            <div class="contenedor-instagram mt-4">
+                <h4 class="text-center">📸 Síguenos en Instagram</h4>
+                <p class="text-justify mt-3">
+                    Únete a nuestra comunidad en Instagram. Explora imágenes exclusivas, historias detrás de cámaras y contenido único sobre los momentos más fascinantes de la historia.
+                </p>
+                <a href="https://www.instagram.com/tu_cuenta" target="_blank" class="btn btn-danger btn-block">
+                    Ver nuestro Instagram
+                </a>
+            </div>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <h2 class="text-center mb-3">Videos que te pueden interesar</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-3">
+        <div class="col">
+          <div class="card">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/ANguz6dnCTs"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">
+                Armonías bajo asedio: El violinista de Stalingrado
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/EqknqsLWcEc"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">
+                Entre Viñedos y Bodegas: Historias de Éxito y Tradición
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/hTB9KeaB2QA"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">
+                Revolución y Renacimiento: El Resurgir del Estado Judío en el
+                Siglo XX
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/Hozdq5D7jvA"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">
+                Descubriendo la Puerta de Ishtar: El Esplendor de Babilonia
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="bg-dark text-white text-center py-4 mt-5"
+      style="
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        left: 0;
+        right: 0;
+      "
+    >
+      <div style="width: 100%">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/ddh_yt/" target="_blank">
+                  <img
+                    src="img/instagram.png"
+                    alt="Instagram"
+                    class="img-fluid"
+                    style="width: 60px"
+                  />
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://twitter.com/tu_perfil" target="_blank">
+                  <img
+                    src="img/twitter.jpeg"
+                    alt="Twitter"
+                    class="img-fluid"
+                    style="width: 60px"
+                  />
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.youtube.com/@ddh_yt" target="_blank">
+                  <img
+                    src="img/yt.png"
+                    alt="YouTube"
+                    class="img-fluid"
+                    style="width: 60px"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="img/logo.jpg"
+              alt="Déjate de Historias"
+              class="img-fluid rounded-circle"
+              style="width: 150px"
+            />
+            <h2 class="mt-2">Déjate de Historias</h2>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <a href="curiosidades.html" class="text-white">Curiosidades</a>
+              </li>
+              <li>
+                <a href="calendario.html" class="text-white">Acontecimientos</a>
+              </li>
+              <li><a href="noticias.html" class="text-white">Noticias</a></li>
+              <li>
+                <a href="creadores.html" class="text-white"
+                  >Sobre los creadores</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a
+          href="https://whatsapp.com/channel/0029Vakk2QrDp2Q89reAmP1m"
+          class="whatsapp-button"
+          target="_blank"
+        >
+          <img
+            src="img/whatsapp.png"
+            alt="WhatsApp"
+            style="width: 50px; margin-right: 1px"
+          />
+          Nuestro Canal
+        </a>
+        <div class="mt-4">
+          <img
+            src="img/CCBYNCND.png"
+            alt="CCBYNCND"
+            class="img-fluid"
+            style="width: 100px"
+          />
+          <p class="mt-2">Attribution-NonCommercial-NoDerivatives 3.0 IGO</p>
+          <p>© Déjate de Historias 2025</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap y dependencias de JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="buscador.js"></script>
+  </body>
+</html>

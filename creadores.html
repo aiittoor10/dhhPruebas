@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déjate de Historias</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.ico" sizes="16x16">
+    <link rel="icon" type="image/png" href="logo.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="logo.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="logo.ico">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Déjate de Historias</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calendario.html">Acontecimientos</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Descubre
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="articulos.html">Historia Bélica</a>
+                            <a class="dropdown-item" href="contacto.html">Edad Media</a>
+                            <a class="dropdown-item" href="contacto.html">Leyendas</a>
+                            <a class="dropdown-item" href="contacto.html">Europa</a>
+                            <a class="dropdown-item" href="contacto.html">Prehistoria Humana</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="descubre.html">Descubre Más...</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="creadores.html">Sobre los Creadores</a></li>
+                    <!--<li class="nav-item"><a href="https://ddhhyt.github.io/newsletter/" class="nav-link">Newsletter</a></li>-->
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-image text-center">
+        <h1 class="custom-header mt-4"></h1>
+    </div>
+
+    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+        <strong>¡Atención!</strong> La página web está en fase de desarrollo y se irán añadiendo más contenidos. Se
+        espera que esté completamente disponible aproximadamente en marzo de 2025.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="text-center">
+                    <h3 id="event-date"></h3>
+                    <div id="event-description" class="alert alert-info mt-3" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <form class="form-inline justify-content-center my-2 my-lg-0">
+            <input class="form-control form-control-lg mr-sm-2" type="search" placeholder="Explora historias perdidas..."
+                style="width: 400px;" aria-label="Buscar">
+            <button class="btn btn-outline-success btn-lg my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+    </div>
+
+
+    <section class="container my-4">
+        <div class="row align-items-center section-image">
+            <div class="col-md-4 mb-4 order-md-1">
+                <img src="img/perfil.png" class="circle-container" alt="Edad Moderna">
+
+            </div>
+            <div class="col-md-8 mb-4 order-md-2">
+                <h2>Jesús - Creador y productor de contenido audiovisual para videos en YouTube.</h2>
+                <p class="lead text-justify">Soy creador de contenido para videos de YouTube, especializado en producir
+                    material
+                    audiovisual que entretiene, educa e inspira a una amplia audiencia. Mi objetivo es combinar
+                    creatividad y técnica para ofrecer videos de alta calidad que conecten con los espectadores y dejen
+                    una impresión duradera.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-4">
+        <div class="row align-items-center section-image">
+            <div class="col-md-4 mb-4 order-md-1">
+                <img src="img/perfil.png" class="circle-container" alt="Ivan">
+
+            </div>
+            <div class="col-md-8 mb-4 order-md-2">
+                <h2>Ivan - Creador y productor de contenido audiovisual para videos en YouTube.</h2>
+                <p class="lead text-justify">Con una pasión innata por la creación de contenido visual, me especializo
+                    en la
+                    producción de videos para YouTube. Mi enfoque se centra en la elaboración de material audiovisual
+                    que no solo entretiene, sino que también educa y motiva a una audiencia diversa. A través de una
+                    combinación equilibrada de creatividad y habilidades técnicas, mi objetivo es generar videos de alto
+                    impacto que cautiven a los espectadores y perduren en su memoria.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-4">
+        <div class="row align-items-center section-image">
+            <div class="col-md-4 mb-4 order-md-1">
+                <img src="img/perfil.png" class="circle-container" alt="Ivan">
+
+            </div>
+            <div class="col-md-8 mb-4 order-md-2">
+                <h2>Aitor - Desarrollador Web y editor de los videos.</h2>
+                <p class="lead text-justify">Como editor de videos y desarrollador web, me especializo en la creación de
+                    contenido visual y la optimización de experiencias digitales. Mi enfoque se centra en combinar
+                    técnicas avanzadas de edición con habilidades de desarrollo web para producir videos de alta calidad
+                    que no solo cautiven al espectador, sino que también impulsen la interacción y el compromiso en
+                    plataformas como YouTube. Con un compromiso constante hacia la innovación y la excelencia, busco
+                    crear experiencias visuales impactantes que resuenen de manera significativa con el público
+                    objetivo.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="bg-dark text-white text-center py-4 mt-5" style="width: 100%; margin: 0; padding: 0;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/ddh_yt/" target="_blank">
+                                <img src="img/instagram.png" alt="Instagram" class="img-fluid" style="width: 60px;">
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/tu_perfil" target="_blank">
+                                <img src="img/twitter.jpeg" alt="Twitter" class="img-fluid" style="width: 60px;">
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/@ddh_yt" target="_blank">
+                                <img src="img/yt.png" alt="YouTube" class="img-fluid" style="width: 60px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/logo.jpg" alt="Déjate de Historias" class="img-fluid rounded-circle"
+                        style="width: 150px;">
+                    <h2 class="mt-2">Déjate de Historias</h2>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-unstyled">
+                        <li><a href="curiosidades.html" class="text-white">Curiosidades</a></li>
+                        <li><a href="calendario.html" class="text-white">Acontecimientos</a></li>
+                        <li><a href="noticias.html" class="text-white">Noticias</a></li>
+                        <li><a href="creadores.html" class="text-white">Sobre los creadores</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="https://whatsapp.com/channel/0029Vakk2QrDp2Q89reAmP1m" class="whatsapp-button" target="_blank">
+                <img src="img/whatsapp.png" alt="WhatsApp" style="width: 50px; margin-right: 1px;"> Nuestro Canal
+            </a>
+            <div class="mt-4">
+                <img src="img/CCBYNCND.png" alt="CCBYNCND" class="img-fluid" style="width: 100px;">
+                <p class="mt-2">Attribution-NonCommercial-NoDerivatives 3.0 IGO</p>
+                <p>© Déjate de Historias 2024</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
